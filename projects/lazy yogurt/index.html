@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이지 요거트 (Lazy Yogurt) — UNNYBUS Portfolio</title>
+    <meta name="description" content="AI 이미지 활용 요거트 브랜드 비주얼 및 상세페이지 제작">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../detail.css">
+    <style>
+        /* 2-column detail page layout (Oncia style) */
+        .detail-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        .detail-col {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            background: #ffffff;
+        }
+        .detail-col-label {
+            padding: 14px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a2e;
+            background: #f5f3ff;
+            border-bottom: 1px solid #e5e5e5;
+            text-align: center;
+        }
+        .detail-col-label span {
+            font-size: 11px;
+            font-weight: 500;
+            color: #888;
+            margin-left: 6px;
+        }
+        .detail-col img {
+            width: 100%;
+            display: block;
+            cursor: zoom-in;
+        }
+        /* Section nav buttons */
+        .section-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 24px 0 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 24px;
+            border-radius: 100px;
+            border: 1px solid var(--border-glass);
+            background: rgba(59, 130, 246, 0.08);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .section-nav a:hover, .section-nav a.active {
+            background: var(--accent-primary);
+            color: #fff;
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-glow);
+        }
+        @media (max-width: 768px) {
+            .detail-two-col { grid-template-columns: 1fr; }
+            .section-nav { flex-wrap: wrap; padding: 16px 20px 24px; }
+        }
+    </style>
+</head>
+<body class="detail-page">
+
+    <!-- Navigation -->
+    <nav class="detail-nav">
+        <a href="../../index.html#portfolio" class="detail-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            포트폴리오로 돌아가기
+        </a>
+        <a href="../../index.html" class="detail-logo">
+            <img src="../../images/newlogo.png" alt="UNNYBUS Logo" class="nav-logo-img">
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="detail-hero">
+        <div class="detail-hero-bg" style="background-image: url('../../images/hero/herolazy yogurt.jpg');"></div>
+        <div class="detail-hero-content">
+            <div class="detail-category">F&B / 식품</div>
+            <h1>레이지 요거트 (Lazy Yogurt)</h1>
+            <p class="subtitle">AI 이미지 활용 요거트 브랜드 비주얼 및 상세페이지 제작</p>
+            <span class="ai-hero-tag">✨ AI 이미지 활용 프로젝트</span>
+        </div>
+    </section>
+
+    <!-- Project Info -->
+    <div class="detail-info">
+        <div class="info-card reveal">
+            <div class="info-label">프로젝트 범위</div>
+            <div class="info-value">AI 이미지 제작, 상세페이지 기획/제작</div>
+        </div>
+        <div class="info-card reveal">
+            <div class="info-label">작업 내용</div>
+            <div class="info-tags">
+                <span class="info-tag">AI 이미지</span>
+                <span class="info-tag">상세페이지</span>
+                <span class="info-tag">F&B</span>
+                <span class="info-tag">요거트</span>
+                <span class="info-tag">반려동물</span>
+            </div>
+        </div>
+        <div class="info-card reveal">
+            <div class="info-label">성과</div>
+            <div class="info-value">AI 이미지로 촬영비 절감, 프리미엄 비주얼 완성</div>
+        </div>
+    </div>
+
+    <!-- Section Navigation -->
+    <div class="section-nav">
+        <a href="#ai-images" class="active">🤖 AI 이미지</a>
+        <a href="#detail-pages">📱 상세페이지</a>
+    </div>
+
+    <!-- Description -->
+    <div class="detail-gallery">
+        <p class="reveal" style="font-size: 17px; color: var(--text-secondary); line-height: 1.9; max-width: 800px; margin: 0 auto 48px; text-align: center; word-break: keep-all;">
+            요거트 브랜드 레이지 요거트의 AI 이미지 제작과 상세페이지를 기획·제작했습니다. AI 기술로 스튜디오 촬영 없이 프리미엄 제품 비주얼을 완성하고, 레이지요거트와 PET&I TOGETHER 2개 라인의 상세페이지를 제작했습니다.
+        </p>
+    </div>
+
+    <!-- AI 이미지 Gallery (Oncia masonry style) -->
+    <div class="detail-gallery" id="ai-images">
+        <h2 class="gallery-section-title reveal">
+            🤖 AI 이미지 제작
+            <span>이미지를 클릭하면 크게 볼 수 있습니다</span>
+        </h2>
+        <div class="gallery-grid">
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 23, 2026 - 1_31PM.jpeg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 23, 2026 - 2_18PM.jpg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 23, 2026 - 6_00PM.jpeg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 23, 2026 - 8_58PM 복사.jpg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 23, 2026 - 9_49PM.jpg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 24, 2026 - 10_43AM.jpg.jpeg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 24, 2026 - 10_53AM.jpg.jpeg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 24, 2026 - 11_13AM.jpg.jpeg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 24, 2026 - 11_24AM.jpg.jpeg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 24, 2026 - 11_42AM 복사.jpg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 24, 2026 - 1_35PM.jpg.jpeg" alt="AI 제품 이미지" loading="lazy"></div>
+            <div class="gallery-item reveal"><img src="ai 이미지 제작/Generated Image February 26, 2026 - 11_41AM.jpg.jpeg" alt="AI 제품 이미지" loading="lazy"></div>
+        </div>
+    </div>
+
+    <!-- 상세페이지: 온시아 스타일 2컬럼 나란히 -->
+    <div class="detail-gallery" id="detail-pages">
+        <h2 class="gallery-section-title reveal">
+            📱 상세페이지
+            <span>레이지요거트 · PET&I TOGETHER</span>
+        </h2>
+        <div class="detail-two-col">
+            <!-- 레이지요거트 -->
+            <div class="detail-col">
+                <div class="detail-col-label">레이지요거트 <span>(3종)</span></div>
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_01.jpg" alt="레이지요거트 상세 1-01" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_02.jpg" alt="레이지요거트 상세 1-02" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_03.jpg" alt="레이지요거트 상세 1-03" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_04.jpg" alt="레이지요거트 상세 1-04" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_05.jpg" alt="레이지요거트 상세 1-05" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_06.jpg" alt="레이지요거트 상세 1-06" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_07.jpg" alt="레이지요거트 상세 1-07" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_08.jpg" alt="레이지요거트 상세 1-08" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_09.jpg" alt="레이지요거트 상세 1-09" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_1_v6-복사_10.jpg" alt="레이지요거트 상세 1-10" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_2_v5-복사_01.jpg" alt="레이지요거트 상세 2-01" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_2_v5-복사_02.jpg" alt="레이지요거트 상세 2-02" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_2_v5-복사_03.jpg" alt="레이지요거트 상세 2-03" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_3_v5-복사_01.jpg" alt="레이지요거트 상세 3-01" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_3_v5-복사_02.jpg" alt="레이지요거트 상세 3-02" loading="lazy">
+                <img src="상세페이지/lazy yogurt/260113_레이지요거트_상세페이지_3_v5-복사_03.jpg" alt="레이지요거트 상세 3-03" loading="lazy">
+            </div>
+            <!-- PET&I TOGETHER -->
+            <div class="detail-col">
+                <div class="detail-col-label">PET&I TOGETHER <span>(2종)</span></div>
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_1_01.jpg" alt="PET&I 상세 1-01" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_1_02.jpg" alt="PET&I 상세 1-02" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_1_03.jpg" alt="PET&I 상세 1-03" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_1_04.jpg" alt="PET&I 상세 1-04" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_2_01.jpg" alt="PET&I 상세 2-01" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_2_02.jpg" alt="PET&I 상세 2-02" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_2_03.jpg" alt="PET&I 상세 2-03" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_2_04.jpg" alt="PET&I 상세 2-04" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_2_05.jpg" alt="PET&I 상세 2-05" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_2_06.jpg" alt="PET&I 상세 2-06" loading="lazy">
+                <img src="상세페이지/PET&I TOGETHER/260226_PET&I-TOGETHER_상세페이지_v2_2_07.jpg" alt="PET&I 상세 2-07" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="detail-cta">
+        <div class="detail-cta-card reveal">
+            <h2>이런 프로젝트, 함께 하실래요?</h2>
+            <p>F&B / 식품 분야에 특화된 전략 디자인을 경험해보세요.</p>
+            <a href="../../diagnosis.html" class="btn-primary">
+                무료 브랜드 진단 신청
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">✕</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <script src="../../detail.js"></script>
+    <script>
+        document.querySelectorAll('.section-nav a').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.section-nav a').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

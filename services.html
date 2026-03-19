@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="config.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — UNNYBUS 유니버스디자인</title>
+    <meta name="description" content="브랜딩, 상세페이지, AI이미지, SNS콘텐츠, 패키지디자인 등 전략 기반 종합 디자인 서비스.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="images/newlogo.png" alt="UNNYBUS Logo" class="nav-logo-img">
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="about.html">About</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="pricing.html">견적내기</a>
+            <a href="insight.html">인사이트</a>
+            <a href="diagnosis.html" class="nav-cta" style="background: linear-gradient(120deg, var(--accent-primary), #0984e3); border:none;">무료 진단하기</a>
+            <a href="http://pf.kakao.com/_VfxaZX/chat" target="_blank" class="nav-cta" style="background: transparent; border: 1.5px solid rgba(255,255,255,0.6); color: #fff;">문의하기</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="메뉴">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container text-center">
+            <span class="section-label">Our Services</span>
+            <h1 class="section-title" style="font-size: 42px;">전략이 담긴<br><span class="highlight">디자인 서비스</span></h1>
+            <p class="section-desc" style="margin: 0 auto;">브랜드 성장에 필요한 모든 디자인을 한 곳에서 해결하세요.</p>
+        </div>
+    </section>
+
+    <!-- Package Solutions (간략 홍보) -->
+    <section class="section" style="padding-top: 80px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Package Solutions</span>
+                <h2 class="section-title reveal reveal-delay-1">합리적인 <span class="highlight">패키지</span>로 시작하세요</h2>
+            </div>
+            <div class="svc-pkg-row reveal">
+                <div class="svc-pkg-promo">
+                    <div class="svc-pkg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                    <div>
+                        <h3>올인원 패키지</h3>
+                        <p>브랜드에 필요한 모든 디자인을 하나의 패키지로. 스타터, 그로스, 프리미엄 3종.</p>
+                    </div>
+                    <a href="pricing.html#allinone" class="pkg-btn primary">자세히 보기 →</a>
+                </div>
+                <div class="svc-pkg-promo">
+                    <div class="svc-pkg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+                    <div>
+                        <h3>디자인 구독</h3>
+                        <p>전담 디자이너가 매월 지속적으로 관리. 라이트, 스탠다드, 프로 3종.</p>
+                    </div>
+                    <a href="pricing.html#subscription" class="pkg-btn primary">자세히 보기 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 건별 서비스 -->
+    <section class="section services-bg" id="services" style="padding-top: 60px;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Individual Services</span>
+                <h2 class="section-title reveal reveal-delay-1">건별 서비스</h2>
+                <p class="section-desc reveal reveal-delay-2" style="margin: 0 auto;">
+                    필요한 서비스만 골라서 의뢰하세요.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-card-img"><img src="images/services/brand-diagnosis.jpg" alt="브랜드 진단" loading="lazy"></div>
+                    <h3>브랜드 진단</h3>
+                    <p>현재 브랜드의 시각적 문제점을 전략적으로 분석하고 개선 방향을 제시합니다.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card-img"><img src="images/services/detail-page.jpg" alt="상세페이지 제작" loading="lazy"></div>
+                    <h3>상세페이지 제작</h3>
+                    <p>전환율을 극대화하는 데이터 기반 상세페이지 디자인 및 제작을 합니다.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-card-img"><img src="images/services/branding-bici.jpg" alt="전략 브랜딩 BI/CI" loading="lazy"></div>
+                    <h3>전략 브랜딩 (BI/CI)</h3>
+                    <p>브랜드 기획, 포지셔닝, BI/CI 개발부터 브랜드 스토리 구축까지 총괄합니다.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card-img"><img src="images/services/sns-content.jpg" alt="SNS 콘텐츠 디자인" loading="lazy"></div>
+                    <h3>SNS 콘텐츠 디자인</h3>
+                    <p>인스타그램 피드, 콘텐츠 전략 수립 및 크리에이티브 디자인을 제공합니다.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card-img"><img src="images/services/instagram-mgmt.jpg" alt="인스타그램 운영 대행" loading="lazy"></div>
+                    <h3>인스타그램 운영 대행</h3>
+                    <p>브랜드 톤앤매너에 맞는 피드 기획, 콘텐츠 제작, 게시물 관리까지 운영합니다.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-card-img"><img src="images/services/ai-image.jpg" alt="AI 이미지 제작" loading="lazy"></div>
+                    <h3>AI 이미지 제작</h3>
+                    <p>AI 기술로 스튜디오급 제품/모델 이미지를 제작하여 촬영비 80%를 절감합니다.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card-img"><img src="images/services/video-edit.jpg" alt="영상 제작 / 편집" loading="lazy"></div>
+                    <h3>영상 제작 / 편집</h3>
+                    <p>브랜드 인트로, 제품 소개, 가이드 영상 등 다양한 포맷의 영상을 제작합니다.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card-img"><img src="images/services/package-design.jpg" alt="패키지 디자인" loading="lazy"></div>
+                    <h3>패키지 디자인</h3>
+                    <p>단상자, 파우치, 라벨, 택배박스 등 제품 패키지 전체를 디자인합니다.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-card-img"><img src="images/services/print-design.jpg" alt="인쇄물 디자인" loading="lazy"></div>
+                    <h3>인쇄물 디자인</h3>
+                    <p>리플렛, 브로슈어, 카탈로그, 명함, 봉투 등 오프라인 인쇄물을 제작합니다.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card-img"><img src="images/services/ad-design.jpg" alt="광고 디자인" loading="lazy"></div>
+                    <h3>광고 디자인</h3>
+                    <p>네이버, 카카오, 메타 등 플랫폼별 최적화된 광고 배너 및 소재를 디자인합니다.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card-img"><img src="images/services/web-landing.jpg" alt="홈페이지 / 랜딩페이지" loading="lazy"></div>
+                    <h3>홈페이지 / 랜딩페이지</h3>
+                    <p>브랜드의 첫인상을 결정하는 홈페이지 및 전환 최적화 랜딩페이지를 제작합니다.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-card-img"><img src="images/services/naming-slogan.jpg" alt="네이밍 / 슬로건" loading="lazy"></div>
+                    <h3>네이밍 / 슬로건</h3>
+                    <p>브랜드 아이덴티티에 맞는 네이밍, 슬로건, 카피라이팅을 기획합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding: 60px 0;">
+        <div class="container text-center reveal">
+            <h2 class="section-title" style="font-size: 28px; margin-bottom: 16px;">어떤 서비스가 필요한지 잘 모르겠다면?</h2>
+            <p class="section-desc" style="margin: 0 auto 32px;">2분이면 끝나는 무료 진단으로 맞춤 솔루션을 제안받으세요.</p>
+            <a href="diagnosis.html" class="btn-primary" style="margin: 0 auto; display: inline-flex;">
+                무료 브랜드 진단하기
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo"><img src="images/newlogo.png" alt="UNNYBUS Logo" class="footer-logo-img"></div>
+            <span class="footer-copy">© 2024 UNNYBUS Design Studio. All rights reserved.</span>
+            <div class="footer-links">
+
+                <a href="https://instagram.com/unnybus" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="맨 위로">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>닥터프리메틱 — UNNYBUS Portfolio</title>
+    <meta name="description" content="기능성 화장품 브랜드 — 상세페이지 기획/제작, 인스타그램 콘텐츠 운영">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../detail.css">
+    <style>
+        /* Section nav buttons */
+        .section-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 24px 0 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 24px;
+            border-radius: 100px;
+            border: 1px solid var(--border-glass);
+            background: rgba(59, 130, 246, 0.08);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .section-nav a:hover, .section-nav a.active {
+            background: var(--accent-primary);
+            color: #fff;
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-glow);
+        }
+        /* 3-column detail page layout */
+        .detail-three-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        .detail-col {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            background: #ffffff;
+        }
+        .detail-col-label {
+            padding: 14px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1a2e;
+            background: #f5f3ff;
+            border-bottom: 1px solid #e5e5e5;
+            text-align: center;
+        }
+        .detail-col-label span {
+            font-size: 11px;
+            font-weight: 500;
+            color: #888;
+            margin-left: 6px;
+        }
+        .detail-col img, .detail-col video {
+            width: 100%;
+            display: block;
+        }
+        /* Instagram grid */
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .insta-grid .insta-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            aspect-ratio: 4 / 5;
+            position: relative;
+            cursor: pointer;
+        }
+        .insta-grid .insta-item img,
+        .insta-grid .insta-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .insta-grid .insta-item .play-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .detail-three-col { grid-template-columns: 1fr; }
+            .insta-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body class="detail-page">
+
+    <!-- Navigation -->
+    <nav class="detail-nav">
+        <a href="../../index.html#portfolio" class="detail-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            포트폴리오로 돌아가기
+        </a>
+        <a href="../../index.html" class="detail-logo">
+            <img src="../../images/newlogo.png" alt="UNNYBUS Logo" class="nav-logo-img">
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="detail-hero">
+        <div class="detail-hero-bg" style="background-image: url('../../images/hero/herodrpremetic.jpg');"></div>
+        <div class="detail-hero-content">
+            <div class="detail-category">뷰티 / 기능성 화장품</div>
+            <h1>닥터프리메틱</h1>
+            <p class="subtitle">기능성 스킨케어 3종 — 상세페이지 기획/제작 + 인스타그램 콘텐츠 운영</p>
+        </div>
+    </section>
+
+    <!-- Project Info -->
+    <div class="detail-info">
+        <div class="info-card">
+            <div class="info-label">프로젝트 범위</div>
+            <div class="info-value">상세페이지 3종 기획/제작, 인스타그램 콘텐츠 디자인 운영</div>
+        </div>
+        <div class="info-card">
+            <div class="info-label">작업 내용</div>
+            <div class="info-tags">
+                <span class="info-tag">상세페이지</span>
+                <span class="info-tag">인스타그램</span>
+                <span class="info-tag">콘텐츠 제작</span>
+                <span class="info-tag">SNS 운영</span>
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="info-label">성과</div>
+            <div class="info-value">인스타그램 초기 운영으로 빠른 팔로워 달성</div>
+        </div>
+    </div>
+
+    <!-- Section Navigation Buttons -->
+    <div class="section-nav">
+        <a href="#detail-pages" class="active">📱 상세페이지</a>
+        <a href="#instagram">📸 인스타그램 운영</a>
+    </div>
+
+    
+    <!-- Description -->
+    <div class="detail-gallery">
+        <p class="reveal" style="font-size: 17px; color: var(--text-secondary); line-height: 1.9; max-width: 800px; margin: 0 auto 48px; text-align: center; word-break: keep-all;">
+            일양약품의 기능성 스킨케어 브랜드 닥터프리메틱의 상세페이지 기획/제작 및 인스타그램 콘텐츠 타겟 마케팅 운영을 통해 런칭 초기의 고객 반응을 극대화했습니다.
+        </p>
+    </div>
+<!-- 상세페이지: 3컬럼 -->
+    <div class="detail-gallery" id="detail-pages">
+        <h2 class="gallery-section-title">
+            📱 상세페이지
+            <span>기미미백 · 주름미백 · 민감성</span>
+        </h2>
+        <div class="detail-three-col">
+            <!-- 기미미백 -->
+                        <div class="detail-col">
+                <div class="detail-col-label">기미미백 크림 </div>
+                <img src="상세페이지/기미미백/1.jpg" alt="기미미백 1" loading="lazy">
+                <img src="상세페이지/기미미백/2.gif" alt="기미미백 GIF">
+                <img src="상세페이지/기미미백/3.jpg" alt="기미미백 3" loading="lazy">
+                <img src="상세페이지/기미미백/4.gif" alt="기미미백 GIF">
+                <img src="상세페이지/기미미백/5.jpg" alt="기미미백 5" loading="lazy">
+                <img src="상세페이지/기미미백/6.gif" alt="기미미백 GIF">
+                <img src="상세페이지/기미미백/7.jpg" alt="기미미백 7" loading="lazy">
+                <img src="상세페이지/기미미백/8.gif" alt="기미미백 GIF">
+                <img src="상세페이지/기미미백/9.jpg" alt="기미미백 9" loading="lazy">
+                <img src="상세페이지/기미미백/10.gif" alt="기미미백 GIF">
+                <img src="상세페이지/기미미백/11.jpg" alt="기미미백 11" loading="lazy">
+            </div>
+            <!-- 주름미백 -->
+            <div class="detail-col">
+                <div class="detail-col-label">주름미백 크림</div>
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_1.jpg" alt="주름미백 1" loading="lazy">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_2_01.gif" alt="주름미백 GIF">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_2_02.jpg" alt="주름미백 2" loading="lazy">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_2_03.gif" alt="주름미백 GIF">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_2_04.jpg" alt="주름미백 3" loading="lazy">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_2_05.gif" alt="주름미백 GIF">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_2_06.jpg" alt="주름미백 4" loading="lazy">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_2_07.gif" alt="주름미백 GIF">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_2_08.jpg" alt="주름미백 5" loading="lazy">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_2_09.gif" alt="주름미백 GIF">
+                <img src="상세페이지/주름미백/주름미백_크림_상세_860_v4_3.jpg" alt="주름미백 6" loading="lazy">
+            </div>
+            <!-- 민감성 -->
+            <div class="detail-col">
+                <div class="detail-col-label">민감성 크림 </div>
+                <img src="상세페이지/민감성/1.jpg" alt="민감성 1" loading="lazy">
+                <img src="상세페이지/민감성/2.gif" alt="민감성 GIF">
+                <img src="상세페이지/민감성/3.jpg" alt="민감성 3" loading="lazy">
+                <img src="상세페이지/민감성/4.gif" alt="민감성 GIF">
+                <img src="상세페이지/민감성/5.jpg" alt="민감성 5" loading="lazy">
+                <img src="상세페이지/민감성/6.gif" alt="민감성 GIF">
+                <img src="상세페이지/민감성/8.jpg" alt="민감성 8" loading="lazy">
+                <img src="상세페이지/민감성/9.gif" alt="민감성 GIF">
+                <img src="상세페이지/민감성/10.jpg" alt="민감성 10" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- 인스타그램 운영 -->
+    <div class="detail-gallery" id="instagram">
+        <h2 class="gallery-section-title">
+            📸 인스타그램 운영
+            <span>콘텐츠 디자인 — 이미지, GIF, 영상</span>
+        </h2>
+        <div class="insta-grid">
+            <div class="insta-item"><img src="인스타그램 운영/2509013_닥터프리메틱_인스타아트보드 1.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2509013_닥터프리메틱_인스타아트보드 2.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2509013_닥터프리메틱_인스타아트보드 3.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/250911_닥터프리메틱_인스타.gif" alt="인스타 GIF" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2509_3_닥터프리메틱_인스타아트보드 1.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2509_4_닥터프리메틱_인스타아트보드 1.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2509_4_닥터프리메틱_인스타아트보드 2.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2509_4_닥터프리메틱_인스타아트보드 3.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2509_5_닥터프리메틱_인스타아트보드 3.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2509_5_닥터프리메틱_인스타아트보드 4.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2510_1_닥터프리메틱_인스타아트보드 2.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2510_2_닥터프리메틱_인스타아트보드 1.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2510_2_닥터프리메틱_인스타아트보드 2.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2510_2_닥터프리메틱_인스타아트보드 4.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2510_2_닥터프리메틱_인스타아트보드 5.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2510_2_닥터프리메틱_인스타아트보드 6.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_1_닥터프리메틱_인스타_2 .jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_2_닥터프리메틱_인스타.psd아트보드 1.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_2_닥터프리메틱_인스타.psd아트보드 2.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_3_닥터프리메틱_인스타아트보드 1.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_3_닥터프리메틱_인스타아트보드 2.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item">
+                <video src="인스타그램 운영/2511_3_닥터프리메틱_인스타아트보드 3_1.mp4" muted loop playsinline></video>
+                <span class="play-badge">▶ 영상</span>
+            </div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_4_닥터프리메틱_인스타아트보드 1.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_4_닥터프리메틱_인스타아트보드 2.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_4_닥터프리메틱_인스타아트보드 4.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_4_닥터프리메틱_인스타아트보드 5.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_4_닥터프리메틱_인스타아트보드 6.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item"><img src="인스타그램 운영/2511_4_닥터프리메틱_인스타아트보드 7.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+            <div class="insta-item">
+                <video src="인스타그램 운영/C2614_4.mp4" muted loop playsinline></video>
+                <span class="play-badge">▶ 영상</span>
+            </div>
+            <div class="insta-item">
+                <video src="인스타그램 운영/C2614_5.mp4" muted loop playsinline></video>
+                <span class="play-badge">▶ 영상</span>
+            </div>
+            <div class="insta-item"><img src="인스타그램 운영/20251110_1647_Luxury Cosmetic Display_remix_01k9pbmke7fyna26zanvzfjvf5 (1) 복사.jpg" alt="인스타 콘텐츠" loading="lazy"></div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="detail-cta">
+        <div class="detail-cta-card">
+            <h2>이런 프로젝트, 함께 하실래요?</h2>
+            <p>뷰티 / 기능성 화장품 분야에 특화된 전략 디자인을 경험해보세요.</p>
+            <a href="../../diagnosis.html" class="btn-primary">
+                무료 브랜드 진단 신청
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">✕</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <script src="../../detail.js"></script>
+    <script>
+        // Section nav active state & smooth scroll
+        document.querySelectorAll('.section-nav a').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.section-nav a').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+        // Video hover autoplay
+        document.querySelectorAll('.insta-item video').forEach(v => {
+            v.closest('.insta-item').addEventListener('mouseenter', () => v.play());
+            v.closest('.insta-item').addEventListener('mouseleave', () => { v.pause(); v.currentTime = 0; });
+        });
+    </script>
+</body>
+</html>

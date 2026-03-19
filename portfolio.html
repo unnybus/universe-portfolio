@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="config.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — UNNYBUS 유니버스디자인</title>
+    <meta name="description" content="유니버스디자인의 브랜딩, 상세페이지, AI이미지 프로젝트 포트폴리오.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="images/newlogo.png" alt="UNNYBUS Logo" class="nav-logo-img">
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="pricing.html">견적내기</a>
+            <a href="insight.html">인사이트</a>
+            <a href="diagnosis.html" class="nav-cta" style="background: linear-gradient(120deg, var(--accent-primary), #0984e3); border:none;">무료 진단하기</a>
+            <a href="http://pf.kakao.com/_VfxaZX/chat" target="_blank" class="nav-cta" style="background: transparent; border: 1.5px solid rgba(255,255,255,0.6); color: #fff;">문의하기</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="메뉴">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container text-center">
+            <span class="section-label">Portfolio</span>
+            <h1 class="section-title" style="font-size: 42px;">우리가 만든<br><span class="highlight">브랜드 스토리</span></h1>
+            <p class="section-desc" style="margin: 0 auto;">전략 기반 디자인으로 브랜드의 가치를 높인 프로젝트들</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
+        <div class="container">
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="beauty">뷰티 / 화장품</button>
+                <button class="filter-btn" data-filter="fashion">패션 / 의류</button>
+                <button class="filter-btn" data-filter="food">F&B / 식품</button>
+                <button class="filter-btn" data-filter="medical">의료 / 병원</button>
+                <button class="filter-btn" data-filter="video">영상 / 콘텐츠</button>
+                <button class="filter-btn" data-filter="branding">브랜딩</button>
+                <button class="filter-btn" data-filter="detail-page">상세페이지</button>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- 뷰티/화장품 -->
+                <a href="projects/oncia/index.html" class="portfolio-item reveal" data-category="beauty detail-page">
+                    <img src="images/thumb/thumboncia.jpg" alt="온시아 Oncia" loading="lazy">
+                    <span class="ai-tag">✨ AI 이미지</span>
+                    <div class="portfolio-overlay">
+                        <h3>온시아 (Oncia)</h3>
+                        <span class="work-type">AI 이미지/영상, 상세페이지</span>
+                        <p>LNP 기술 기반 스킨케어 — AI로 스튜디오급 제품컷/모델컷 제작</p>
+                    </div>
+                </a>
+
+                <a href="projects/premetic/index.html" class="portfolio-item reveal reveal-delay-1" data-category="beauty detail-page">
+                    <img src="images/thumb/thumbdrpremetic.jpg" alt="닥터프리메틱" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>닥터프리메틱 (Dr. Premetic)</h3>
+                        <span class="work-type">SNS 운영, 상세페이지 기획/제작</span>
+                        <p>기미/잡티 타겟 뷰티 브랜드 콘텐츠 전략 및 제작</p>
+                    </div>
+                </a>
+
+                <a href="projects/viveca/index.html" class="portfolio-item reveal reveal-delay-2" data-category="beauty detail-page">
+                    <img src="images/thumb/thumbviveca.jpg" alt="비베카 VIVECA" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>비베카 (VIVECA)</h3>
+                        <span class="work-type">상세페이지, 광고, SNS</span>
+                        <p>모델 이주빈 활용 종합 광고 디자인</p>
+                    </div>
+                </a>
+
+                <a href="projects/bartova/index.html" class="portfolio-item reveal" data-category="beauty branding detail-page">
+                    <img src="images/thumb/thumbbartova.jpg" alt="바르토바 Bartova" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>바르토바 (Bartova)</h3>
+                        <span class="work-type">네이밍, 로고, 홈페이지, 패키지, 상세페이지</span>
+                        <p>30~60대 타겟 웰니스 브랜드 론칭 총괄</p>
+                    </div>
+                </a>
+
+                <a href="projects/divady/index.html" class="portfolio-item reveal reveal-delay-1" data-category="beauty branding video detail-page">
+                    <img src="images/thumb/thumbdivady.jpg" alt="DIVA:DY" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>DIVA:DY (디바디)</h3>
+                        <span class="work-type">D2C 브랜드 런칭 총괄, 브랜딩, 상세페이지</span>
+                        <p>뷰티 디바이스 브랜드 런칭 기획~마케팅</p>
+                    </div>
+                </a>
+
+                <!-- 패션 -->
+                <a href="#" class="portfolio-item reveal reveal-delay-2" data-category="fashion" data-preparing="true">
+                    <img src="images/thumb/thumbbelysa.jpg" alt="벨리사 BELYSA" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>벨리사 (BELYSA)</h3>
+                        <span class="work-type">패션 가방 브랜드 런칭, 패키지</span>
+                        <p>프리미엄 가방 브랜드 패키지 및 브랜딩 총괄</p>
+                    </div>
+                </a>
+
+                <!-- F&B -->
+                <a href="projects/damyang/index.html" class="portfolio-item reveal" data-category="food branding">
+                    <img src="images/thumb/thumbdamyang.jpg" alt="담양샌드" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>담양샌드</h3>
+                        <span class="work-type">브랜드 스토리텔링, 로고, 패키지, VI</span>
+                        <p>담양 특산물 활용 힐링 브랜드 + 팬더 캐릭터 개발</p>
+                    </div>
+                </a>
+
+                <a href="projects/kkotdoline/index.html" class="portfolio-item reveal reveal-delay-1" data-category="food branding detail-page">
+                    <img src="images/thumb/thumbkkotdoline.jpg" alt="꽃돌이네" loading="lazy">
+                    <span class="ai-tag">✨ AI 이미지</span>
+                    <div class="portfolio-overlay">
+                        <h3>꽃돌이네</h3>
+                        <span class="work-type">브랜딩, 패키지, 상세페이지</span>
+                        <p>한우 정육 브랜드 — AI 이미지로 전체 비주얼 제작</p>
+                    </div>
+                </a>
+
+                <a href="projects/lazy%20yogurt/index.html" class="portfolio-item reveal reveal-delay-2" data-category="food detail-page">
+                    <img src="images/thumb/thumblazy yogurt.jpg" alt="레이지 요거트" loading="lazy">
+                    <span class="ai-tag">✨ AI 이미지</span>
+                    <div class="portfolio-overlay">
+                        <h3>레이지 요거트 (Lazy Yogurt)</h3>
+                        <span class="work-type">AI 이미지, 상세페이지</span>
+                        <p>AI 이미지 활용 요거트 브랜드 비주얼 및 상세페이지 제작</p>
+                    </div>
+                </a>
+
+                <!-- 의료 -->
+                <a href="#" class="portfolio-item reveal reveal-delay-2" data-category="medical branding" data-preparing="true">
+                    <img src="images/thumb/thumbmyeonryeok.jpg" alt="면력한방병원" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>면력한방병원</h3>
+                        <span class="work-type">BX 리뉴얼, 브랜드 가이드, 홈페이지, 공간</span>
+                        <p>호텔 같은 고급 컨셉으로 리포지셔닝</p>
+                    </div>
+                </a>
+
+                <!-- 영상 -->
+                <a href="projects/fearx/index.html" class="portfolio-item reveal" data-category="video">
+                    <img src="images/thumb/thumbfearx.jpg" alt="FearX" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>피어엑스 (FearX)</h3>
+                        <span class="work-type">채널 브랜딩, 인트로 영상</span>
+                        <p>유튜브 채널 브랜딩 에셋 제작</p>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-item reveal reveal-delay-1" data-category="beauty detail-page" data-preparing="true">
+                    <img src="images/thumb/thumbhyangbi.jpg" alt="향비 HYANGBI" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>향비 (HYANGBI)</h3>
+                        <span class="work-type">상세페이지 기획/제작</span>
+                        <p>비타씨 브라이트닝 케어 - 고함량 비타민C 미백 제품</p>
+                    </div>
+                </a>
+
+                <a href="projects/lovloy/index.html" class="portfolio-item reveal reveal-delay-2" data-category="fashion detail-page">
+                    <img src="images/thumb/thumblovloy.jpg" alt="LOVLOY" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>LOVLOY</h3>
+                        <span class="work-type">기능성 언더웨어 브랜드 런칭, 상세페이지</span>
+                        <p>40~50대 타겟, 그래핀 소재 코스메틱 웨어</p>
+                    </div>
+                </a>
+
+                <a href="projects/thecovered/index.html" class="portfolio-item reveal" data-category="fashion">
+                    <img src="images/thumb/thumbthecovered.jpg" alt="더커버드 The Covered" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>더커버드 (The Covered)</h3>
+                        <span class="work-type">제품 촬영, 모델 촬영</span>
+                        <p>제품 촬영 및 비주얼 콘텐츠 제작</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo"><img src="images/newlogo.png" alt="UNNYBUS Logo" class="footer-logo-img"></div>
+            <span class="footer-copy">© 2024 UNNYBUS Design Studio. All rights reserved.</span>
+            <div class="footer-links">
+
+                <a href="https://instagram.com/unnybus" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="맨 위로">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>

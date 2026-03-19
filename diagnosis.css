@@ -1,0 +1,483 @@
+/* diagnosis.css - Styles for the step-by-step form */
+
+.diagnosis-body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Abstract Background accents similar to portfolio */
+.diagnosis-body::before {
+    content: '';
+    position: fixed;
+    top: -30%;
+    left: -10%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.diagnosis-body::after {
+    content: '';
+    position: fixed;
+    bottom: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(9, 132, 227, 0.1) 0%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Progress bar */
+.progress-bar-container {
+    position: fixed;
+    top: 60px; /* Below the nav */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 100;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-light));
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Container & Form */
+.diagnosis-container {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 120px 32px 60px;
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagnosis-form {
+    width: 100%;
+    position: relative;
+}
+
+/* Step Cards */
+.step-card {
+    width: 100%;
+    background: rgba(30, 30, 50, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    text-align: center;
+    
+    /* Animation defaults */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.step-card.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+/* Typography inside Steps */
+.step-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--accent-light);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+.step-title {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    color: #fff;
+    word-break: keep-all;
+    text-align: center;
+}
+
+.step-title .highlight {
+    background: linear-gradient(120deg, var(--accent-light), #0984e3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.step-desc {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Forms Elements */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent-light);
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+.form-group option {
+    background: var(--bg-primary);
+    color: #fff;
+}
+
+.row-group {
+    display: flex;
+    gap: 16px;
+}
+
+.row-group .col {
+    flex: 1;
+}
+
+/* Standard Radios styling */
+.radio-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.radio-btn {
+    position: relative;
+    padding: 14px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 500;
+    transition: var(--transition);
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* First row buttons stretch to match 기타's full width */
+.radio-btn:not(#categoryOtherBtn) {
+    flex: 1;
+}
+
+.radio-btn input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.radio-btn:has(input:checked) {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: var(--accent-primary);
+    color: #fff;
+}
+
+/* Tag style button (checkboxes) */
+.tag-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-btn {
+    position: relative;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.tag-btn input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.tag-btn:hover {
+    border-color: rgba(255,255,255,0.3);
+}
+
+.tag-btn:has(input:checked) {
+    background: linear-gradient(120deg, rgba(59, 130, 246, 0.8), rgba(9, 132, 227, 0.8));
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Large Card Checkboxes */
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.check-card {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.check-card input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.check-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    transition: var(--transition);
+    color: var(--text-secondary);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.check-icon {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.check-card:hover .check-content {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.check-card:has(input:checked) .check-content {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--accent-primary);
+    color: #fff;
+}
+.check-card:has(input:checked) .check-icon {
+    background: var(--accent-primary);
+}
+
+
+/* Actions */
+.step-actions {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.step-actions.split {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-primary {
+    background: var(--accent-primary);
+    color: #fff;
+    border: none;
+    padding: 16px 36px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-second {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 16px 36px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-second:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-text {
+    background: transparent;
+    color: var(--text-secondary);
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 16px 12px;
+    transition: var(--transition);
+}
+
+.btn-text:hover {
+    color: #fff;
+}
+
+.highlight-btn {
+    background: linear-gradient(120deg, var(--accent-primary), #0984e3);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+}
+
+/* Success Card */
+.text-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@media (max-width: 768px) {
+    .diagnosis-container {
+        margin: 0 auto;
+        padding: 100px 20px 40px;
+    }
+    .step-card {
+        padding: 32px 24px;
+    }
+    .step-title {
+        font-size: 24px;
+    }
+    .row-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    .check-content {
+        padding: 16px;
+    }
+}
+
+/* "기타" free-text input */
+.other-input-wrap {
+    width: 100%;
+}
+.other-input-wrap input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Inline text input that replaces "기타" button */
+#categoryOtherBtn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.radio-btn-input {
+    padding: 14px 24px;
+    border: 1px solid var(--accent-primary);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(59, 130, 246, 0.15);
+    outline: none;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.radio-btn-input::placeholder {
+    color: var(--text-secondary);
+}
+.radio-btn-input:focus {
+    border-color: var(--accent-light);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}

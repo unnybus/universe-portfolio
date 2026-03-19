@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="config.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNNYBUS — 전략 디자인 스튜디오 | 유니버스디자인</title>
+    <meta name="description" content="전략이 없는 디자인은 팔리지 않습니다. 유니버스디자인은 매출과 전환으로 이어지는 전략 기반 디자인을 만듭니다. 브랜딩, 상세페이지, AI 이미지 제작.">
+    <meta property="og:title" content="UNNYBUS — 전략 디자인 스튜디오">
+    <meta property="og:description" content="Strategy Before Design. 매출과 전환으로 이어지는 전략 기반 디자인 스튜디오.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <img src="images/logo_symbol.png" alt="UNNYBUS Symbol" class="loader-symbol-img">
+            <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="images/newlogo.png" alt="UNNYBUS Logo" class="nav-logo-img">
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="pricing.html">견적내기</a>
+            <a href="insight.html">인사이트</a>
+            <a href="diagnosis.html" class="nav-cta" style="background: linear-gradient(120deg, var(--accent-primary), #0984e3); border:none;">무료 진단하기</a>
+            <a href="http://pf.kakao.com/_VfxaZX/chat" target="_blank" class="nav-cta" style="background: transparent; border: 1.5px solid rgba(255,255,255,0.6); color: #fff;">문의하기</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="메뉴">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas class="hero-canvas" id="hero-canvas"></canvas>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Strategy Design Studio
+            </div>
+            <h1 class="hero-title">
+                전략이 없는 디자인은<br>
+                <span class="gradient">팔리지 않습니다</span>
+            </h1>
+            <p class="hero-subtitle">
+                유니버스디자인은 매출과 전환으로 이어지는 디자인을 만듭니다.<br>
+                Strategy Before Design — 전략 기반 브랜드 디자인 스튜디오.
+            </p>
+            <div class="hero-buttons">
+                <a href="portfolio.html" class="btn-primary">
+                    포트폴리오 보기
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="diagnosis.html" class="btn-outline">
+                    무료 브랜드 진단
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            SCROLL
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Client Logos Marquee -->
+    <section class="section" style="padding: 40px 48px;">
+        <div class="clients-wrapper">
+            <div class="clients-track" id="clients-track">
+                <span>Dr. Premetic</span>
+                <span>Oncia</span>
+                <span>VIVECA</span>
+                <span>Bartova</span>
+                <span>DIVA:DY</span>
+                <span>담양샌드</span>
+                <span>꽃돌이네</span>
+                <span>면력한방병원</span>
+                <span>BELYSA</span>
+                <span>FearX</span>
+                <span>LOVLOY</span>
+                <span>향비</span>
+                <span>뉴트리케어</span>
+                <!-- Duplicate for seamless loop -->
+                <span>Dr. Premetic</span>
+                <span>Oncia</span>
+                <span>VIVECA</span>
+                <span>Bartova</span>
+                <span>DIVA:DY</span>
+                <span>담양샌드</span>
+                <span>꽃돌이네</span>
+                <span>면력한방병원</span>
+                <span>BELYSA</span>
+                <span>FearX</span>
+                <span>LOVLOY</span>
+                <span>향비</span>
+                <span>뉴트리케어</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy & Promise Section -->
+    <section class="section" style="background: linear-gradient(to bottom, var(--bg-primary), rgba(30, 30, 50, 0.4)); padding-top: 100px;">
+        <div class="container">
+            <div class="strategy-grid">
+                <div class="sales-hook-card text-center reveal" style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="section-label" style="margin: 0 auto 16px;">The Reality</span>
+                    <h2 class="sales-title" style="font-size: 26px; line-height: 1.5; margin-bottom: 24px;">
+                        "제품은 완벽한데,<br>왜 생각만큼 매출이 오르지 않을까요?"
+                    </h2>
+                    <p class="sales-desc" style="font-size: 15px; margin-bottom: 0;">
+                        고객은 긴 글을 먼저 읽지 않습니다. <strong>0.1초의 압도적인 시각적 경험(Visual Vibe)</strong>이 구매를 결정합니다.<br>
+                        유니버스가 기획하는 브랜딩과 데이터 기반 상세페이지는, <strong>100명의 뛰어난 영업사원보다 강력하게 고객을 설득합니다.</strong>
+                    </p>
+                </div>
+                <div class="sales-hook-card text-center reveal reveal-delay-1" style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="section-label" style="margin: 0 auto 16px;">Our Standard</span>
+                    <h2 class="guarantee-title" style="font-size: 25px; line-height: 1.5; margin-bottom: 24px; color: #fff;">
+                        단순한 외주 업체가 아닌,<br>
+                        <span class="highlight">전략적 비즈니스 파트너로 함께합니다.</span>
+                    </h2>
+                    <p class="guarantee-desc" style="font-size: 15px; margin: 0; color: var(--text-secondary);">
+                        유니버스는 공장형 찍어내기식 디자인을 하지 않습니다.<br>
+                        파트너사의 확실한 결과물과 압도적인 퀄리티 보장을 위해<br>
+                        매월 <strong>한정된 수량(T.O)</strong>의 프로젝트만 집중해서 진행합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Summary -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image reveal">
+                    <img src="images/hero.png" alt="UNNYBUS Design Studio">
+                </div>
+                <div class="about-text">
+                    <span class="section-label reveal">About Us</span>
+                    <h2 class="section-title reveal reveal-delay-1">Strategy<br>Before Design</h2>
+                    <p class="section-desc reveal reveal-delay-2">
+                        유니버스디자인은 단순히 예쁜 디자인이 아닌, <strong>매출과 전환으로 이어지는 디자인</strong>을 만듭니다.
+                        브랜드의 본질적 가치를 전략적으로 분석하고, 시각적으로 구현하는 전략 디자인 스튜디오입니다.
+                    </p>
+                    <div class="about-stats reveal reveal-delay-3">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">프로젝트 완료</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="30">0</span>
+                            <span class="stat-label">브랜드 파트너</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="80">0</span>
+                            <span class="stat-label">AI 비용 절감 %</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn-outline reveal reveal-delay-3" style="margin-top: 24px; display: inline-flex;">더 알아보기 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Summary -->
+    <section class="section services-bg" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Our Services</span>
+                <h2 class="section-title reveal reveal-delay-1">당신의 브랜드를 위한<br>전략적 솔루션</h2>
+                <p class="section-desc reveal reveal-delay-2" style="margin: 0 auto;">
+                    업종별 최적화된 디자인 서비스로 브랜드의 경쟁력을 높여드립니다.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-card-img"><img src="images/services/branding-bici.jpg" alt="전략 브랜딩" loading="lazy"></div>
+                    <h3>전략 브랜딩</h3>
+                    <p>BI/CI, 네이밍, 포지셔닝부터 브랜드 스토리 구축까지 총괄합니다.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card-img"><img src="images/services/detail-page.jpg" alt="상세페이지 제작" loading="lazy"></div>
+                    <h3>상세페이지 제작</h3>
+                    <p>전환율을 극대화하는 데이터 기반 상세페이지 디자인 및 제작.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-card-img"><img src="images/services/ai-image.jpg" alt="AI 이미지 제작" loading="lazy"></div>
+                    <h3>AI 이미지 제작</h3>
+                    <p>AI로 스튜디오급 제품/모델 이미지를 제작, 촬영비 80% 절감.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-card-img"><img src="images/services/sns-content.jpg" alt="SNS / 인스타 운영" loading="lazy"></div>
+                    <h3>SNS / 인스타 운영</h3>
+                    <p>콘텐츠 전략 수립, 피드 디자인, 인스타그램 운영 대행.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-4">
+                    <div class="service-card-img"><img src="images/services/package-design.jpg" alt="패키지 / 인쇄물" loading="lazy"></div>
+                    <h3>패키지 / 인쇄물</h3>
+                    <p>단상자, 파우치, 명함, 리플렛 등 제품 패키지와 인쇄물 디자인.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-5">
+                    <div class="service-card-img"><img src="images/services/video-edit.jpg" alt="영상 / 광고 디자인" loading="lazy"></div>
+                    <h3>영상 / 광고 디자인</h3>
+                    <p>브랜드 영상, 광고 배너, 랜딩페이지 등 디지털 매체 전반 제작.</p>
+                </div>
+            </div>
+            <div class="text-center reveal" style="margin-top: 40px;">
+                <a href="services.html" class="btn-outline" style="display: inline-flex;">전체 서비스 보기 →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Promo -->
+    <section class="section" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Packages</span>
+                <h2 class="section-title reveal reveal-delay-1">합리적인 <span class="highlight">패키지</span>로 시작하세요</h2>
+            </div>
+            <div class="svc-pkg-row reveal">
+                <div class="svc-pkg-promo">
+                    <div class="svc-pkg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                    <div>
+                        <h3>올인원 패키지</h3>
+                        <p>브랜드에 필요한 모든 디자인을 하나의 패키지로.<br>스타터 · 그로스 · 프리미엄 3종 구성.</p>
+                    </div>
+                    <a href="pricing.html#allinone" class="pkg-btn primary">견적 보기 →</a>
+                </div>
+                <div class="svc-pkg-promo">
+                    <div class="svc-pkg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+                    <div>
+                        <h3>디자인 구독</h3>
+                        <p>전담 디자이너가 매월 지속적으로 관리.<br>라이트 · 스탠다드 · 프로 3종 구성.</p>
+                    </div>
+                    <a href="pricing.html#subscription" class="pkg-btn primary">견적 보기 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Summary -->
+    <section class="section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Portfolio</span>
+                <h2 class="section-title reveal reveal-delay-1">우리가 만든<br>브랜드 스토리</h2>
+                <p class="section-desc reveal reveal-delay-2" style="margin: 0 auto;">
+                    전략 기반 디자인으로 브랜드의 가치를 높인 프로젝트들
+                </p>
+            </div>
+            <div class="portfolio-grid" id="portfolio-grid">
+                <a href="projects/oncia/index.html" class="portfolio-item reveal" data-category="beauty">
+                    <img src="images/thumb/thumboncia.jpg" alt="온시아 Oncia" loading="lazy">
+                    <span class="ai-tag">✨ AI 이미지</span>
+                    <div class="portfolio-overlay">
+                        <h3>온시아 (Oncia)</h3>
+                        <span class="work-type">AI 이미지/영상, 상세페이지</span>
+                        <p>LNP 기술 기반 스킨케어 — AI로 스튜디오급 제품컷/모델컷 제작</p>
+                    </div>
+                </a>
+                <a href="projects/bartova/index.html" class="portfolio-item reveal reveal-delay-1" data-category="beauty branding">
+                    <img src="images/thumb/thumbbartova.jpg" alt="바르토바 Bartova" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>바르토바 (Bartova)</h3>
+                        <span class="work-type">네이밍, 로고, 홈페이지, 패키지, 상세페이지</span>
+                        <p>30~60대 타겟 웰니스 브랜드 론칭 총괄</p>
+                    </div>
+                </a>
+                <a href="projects/damyang/index.html" class="portfolio-item reveal reveal-delay-2" data-category="food branding">
+                    <img src="images/thumb/thumbdamyang.jpg" alt="담양샌드" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>담양샌드</h3>
+                        <span class="work-type">브랜드 스토리텔링, 로고, 패키지, VI</span>
+                        <p>담양 특산물 활용 힐링 브랜드 + 팬더 캐릭터 개발</p>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center reveal" style="margin-top: 40px;">
+                <a href="portfolio.html" class="btn-primary" style="display: inline-flex;">
+                    전체 포트폴리오 보기
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Strategy Section -->
+    <section class="section ai-section" id="ai-strategy">
+        <div class="container">
+            <div class="ai-content">
+                <div class="ai-text">
+                    <span class="section-label reveal">AI Strategy</span>
+                    <h2 class="section-title reveal reveal-delay-1">AI 이미지로<br>촬영비 80% 절감</h2>
+                    <p class="section-desc reveal reveal-delay-2">
+                        유니버스디자인은 AI 이미지 기술을 활용하여 스튜디오 촬영 없이도,<br>프리미엄 퀄리티의 제품/모델 이미지를 제작합니다.<br>비용은 줄이고, 퀄리티는 높이세요.
+                    </p>
+                    <div class="ai-compare-cards reveal reveal-delay-3">
+                        <div class="ai-compare-labels">
+                            <div class="ai-compare-label-header"></div>
+                            <div class="ai-compare-label">제품 촬영</div>
+                            <div class="ai-compare-label">모델 촬영</div>
+                            <div class="ai-compare-label">제작 기간</div>
+                        </div>
+                        <div class="ai-compare-col ai-compare-old">
+                            <div class="ai-compare-header">기존 스튜디오 촬영</div>
+                            <div class="ai-compare-cell"><span data-price-key="ai_compare.studio.photo_min"></span> ~ <span data-price-key="ai_compare.studio.photo_max" data-price-suffix="원"></span></div>
+                            <div class="ai-compare-cell"><span data-price-key="ai_compare.studio.model_min"></span> ~ <span data-price-key="ai_compare.studio.model_max" data-price-suffix="원"></span></div>
+                            <div class="ai-compare-cell">2 ~ 3주</div>
+                        </div>
+                        <div class="ai-compare-col ai-compare-new">
+                            <div class="ai-compare-header">AI 이미지 제작</div>
+                            <div class="ai-compare-cell"><span class="highlight"><span data-price-key="ai_compare.ai.photo_min" data-price-prefix=""></span> ~ <span data-price-key="ai_compare.ai.photo_max" data-price-prefix="" data-price-suffix="원"></span></span> <span class="ai-save" data-price-key="ai_compare.ai.photo_save"></span></div>
+                            <div class="ai-compare-cell"><span class="highlight"><span data-price-key="ai_compare.ai.model_min" data-price-prefix=""></span> ~ <span data-price-key="ai_compare.ai.model_max" data-price-prefix="" data-price-suffix="원"></span></span> <span class="ai-save" data-price-key="ai_compare.ai.model_save"></span></div>
+                            <div class="ai-compare-cell"><span class="highlight">3 ~ 5일</span> <span class="ai-save">▼75%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-visual reveal reveal-delay-4">
+                    <div class="ai-carousel-wrapper">
+                        <div class="ai-carousel-track">
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_1.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_2.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_3.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_4.jpg?v=2" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_5.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_6.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_7.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_8.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_9.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_10.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_11.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <!-- Duplicated Set for infinite loop -->
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_1.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_2.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_3.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_4.jpg?v=2" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_5.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_6.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_7.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_8.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_9.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_10.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="ai-carousel-item"><img src="images/ai_images/ai_image_11.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact" style="padding: 100px 0;">
+        <div class="container text-center reveal">
+            <span class="section-label" style="margin: 0 auto 16px;">Contact Us</span>
+            <h2 class="section-title" style="font-size: 36px; margin-bottom: 24px;">브랜드의 성장을<br>함께하고 싶습니다</h2>
+            <p class="section-desc" style="margin: 0 auto 40px; font-size: 16px;">2분 무료 브랜드 진단으로 시작하세요.<br>현재 브랜드의 시각적 개선점과 성장 방향을 제시해 드립니다.</p>
+            <a href="diagnosis.html" class="btn-primary" style="margin: 0 auto 60px; display: inline-flex;">
+                무료 브랜드 진단 신청
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <div class="contact-info" style="justify-content: center;">
+                <div class="contact-info-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    contact@unnybus.com
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo"><img src="images/newlogo.png" alt="UNNYBUS Logo" class="footer-logo-img"></div>
+            <span class="footer-copy">© 2024 UNNYBUS Design Studio. All rights reserved.</span>
+            <div class="footer-links">
+
+                <a href="https://instagram.com/unnybus" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="맨 위로">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>

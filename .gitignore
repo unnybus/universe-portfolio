@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+
+# Python scripts (not needed for website)
+*.py
+
+# Google Apps Script (not needed for deployment) 
+google_apps_script.js
+
+# Large video files in divady project (6.7GB - exceed GitHub limits)
+projects/divady/유튜브영상/
+projects/divady/howtouse영상/
+
+# Node modules
+node_modules/

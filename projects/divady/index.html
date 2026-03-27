@@ -30,10 +30,11 @@
             transform: translateY(-4px);
             box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
         }
-        .video-item video {
+        .video-item iframe {
             width: 100%;
+            aspect-ratio: 16 / 9;
             display: block;
-            cursor: pointer;
+            border: none;
         }
         .video-item-info {
             padding: 20px 28px;
@@ -189,7 +190,7 @@
         </h2>
         <div class="video-showcase">
             <div class="video-item reveal">
-                <video src="howtouse영상/230703 최종 how to use DIVADY (더빙 x).mp4" muted loop playsinline preload="metadata"></video>
+                <iframe src="https://drive.google.com/file/d/1vXld9gGOsNQijpApHhJl0W7OnQToc6Ou/preview" allow="autoplay" allowfullscreen></iframe>
                 <div class="video-item-info">
                     <div>
                         <div class="video-item-title">How to Use DIVADY</div>
@@ -197,12 +198,12 @@
                     </div>
                     <div class="video-play-hint">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-                        클릭하여 재생
+                        ▶ 재생
                     </div>
                 </div>
             </div>
             <div class="video-item reveal">
-                <video src="유튜브영상/뷰티 디바이스 중에 최애탬을 고르라면.mp4" muted loop playsinline preload="metadata"></video>
+                <iframe src="https://drive.google.com/file/d/1bSo8TnjGh4wW5NHL5JHF0VHS0-uoqvPx/preview" allow="autoplay" allowfullscreen></iframe>
                 <div class="video-item-info">
                     <div>
                         <div class="video-item-title">뷰티 디바이스 중에 최애탬을 고르라면</div>
@@ -210,12 +211,12 @@
                     </div>
                     <div class="video-play-hint">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-                        클릭하여 재생
+                        ▶ 재생
                     </div>
                 </div>
             </div>
             <div class="video-item reveal">
-                <video src="유튜브영상/디바디 Q&A.mp4" muted loop playsinline preload="metadata"></video>
+                <iframe src="https://drive.google.com/file/d/1B9dOtK26rjk3p_9rx6cW3kR1c4AOjEii/preview" allow="autoplay" allowfullscreen></iframe>
                 <div class="video-item-info">
                     <div>
                         <div class="video-item-title">디바디 Q&A</div>
@@ -223,12 +224,12 @@
                     </div>
                     <div class="video-play-hint">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-                        클릭하여 재생
+                        ▶ 재생
                     </div>
                 </div>
             </div>
             <div class="video-item reveal">
-                <video src="유튜브영상/디바디 사용 꿀팁.mp4" muted loop playsinline preload="metadata"></video>
+                <iframe src="https://drive.google.com/file/d/1YM3nyCmhjDhM6-oZF7cJTQKrn-64ybpG/preview" allow="autoplay" allowfullscreen></iframe>
                 <div class="video-item-info">
                     <div>
                         <div class="video-item-title">디바디 사용 꿀팁</div>
@@ -236,7 +237,7 @@
                     </div>
                     <div class="video-play-hint">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-                        클릭하여 재생
+                        ▶ 재생
                     </div>
                 </div>
             </div>
@@ -346,12 +347,7 @@
                 btn.classList.add('active');
             });
         });
-        // Video click to play/pause
-        document.querySelectorAll('.video-item video').forEach(v => {
-            v.addEventListener('click', () => {
-                if (v.paused) { v.play(); } else { v.pause(); }
-            });
-        });
+
     </script>
 </body>
 </html>
